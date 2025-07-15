@@ -1,0 +1,6 @@
+<h2>{{ section().name }}</h2>
+<div class="form">
+  @for (field of section().fields; track $index) {
+    <input [formControl]="$any(form().get(field.code))">
+  }
+</div>
